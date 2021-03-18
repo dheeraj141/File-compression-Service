@@ -14,10 +14,11 @@
 
 
 
-* these two script should be run on two different terminals  
+
 * to run the server run   ./runscript 2 64 ( this means run 2 segments of 64 size) 
 
 * to run thhe client run  ./client_script --file ./test1.txt --state SYNC 
+* these two script should be run on two different terminals  
 
 ( the file should be in same directory and please don't provide absolute path)
 
@@ -28,11 +29,7 @@
 
 ## Code description
 
-The main files are client_combined and server_combined.
-
-this client script run 5 instances of the same client to the server and mesaures timem ( 5 were taken and then value was averaged to calcullate CST). 
-
-
-for QOS separate files are added which sends multiple request to the server from the same client and corressponding server file is also there. 
-
-building mechanism is same as that above.
+* The main files are client_combined and server_combined.
+* Comments are added in the code for understanding. 
+* if you are reading the code read the sync one , easier to understand. 
+* Check this diagram which shows the communication between server and the libraray ( client).
