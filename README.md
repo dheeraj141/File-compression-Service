@@ -1,6 +1,6 @@
 
 
-to build the code run all_build.sh ( this should be in the same folder as that of snappy c and other files, i have already place all that in one)
+#to build the code run all_build.sh ( this should be in the same folder as that of snappy c and other files, i have already place all that in one)
 
 
 
