@@ -10,35 +10,23 @@
 * The code has a server and a library ( which supports two methods of calling server sync and async and sync is done via msg_receive in posix message queues and async is done via the signal handler ( this is more productive as the client is not blocked and can do its work in the meantime).
 
 ## Building code
-to build the code run all_build.sh ( this should be in the same folder as that of snappy c and other files, i have already place all that in one)
+* to build the code run all_build.sh ( this should be in the same folder as that of snappy c and other files, i have already place all that in one)
 
 
 
-these two script should be run on two different terminals 
-to run the server run  
+* these two script should be run on two different terminals  
+* to run the server run   ./runscript 2 64 ( this means run 2 segments of 64 size) 
 
-./runscript 2 64 ( this means run 2 segments of 64 size) 
-
-to run thhe client run 
-
-./client_script --file ./test1.txt --state SYNC 
+* to run thhe client run  ./client_script --file ./test1.txt --state SYNC 
 
 ( the file should be in same directory and please don't provide absolute path)
 
 
 
 
-these two scripts requires two terminals to run as they are communicating. 
+* these two scripts requires two terminals to run as they are communicating. 
 
-
-
-I have tried running them on a single terminal using 
-
-Bash run_scipt.sh & Bash client_script.sh 
-
-but this command does not allow inputs to the script so inputs are hard coded in that. so if you want to run the program in a single terminal then Bash run_script_test.sh & Bash client_script.sh
-
-
+## Code description
 
 The main files are client_combined and server_combined.
 
