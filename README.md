@@ -32,4 +32,5 @@
 * The main files are client_combined and server_combined.
 * Comments are added in the code for understanding. 
 * if you are reading the code read the sync one , easier to understand. 
+* ![Overall Architecture](/images/fig1.jpeg)
 * Check this diagram which shows the communication between server and the libraray ( client).
