@@ -1,15 +1,15 @@
 
-**Description**. 
+# Description 
 
-This is a file compression service code which starts a server process which is configured via number of segments and segment size and provides compression service to other processes. The compression is done via the snappyC developed by google ( C version) in the background.
+* This is a **file compression service** code which starts a server process which is configured via number of segments and segment size and provides compression      service to other processes. The compression is done via the snappyC developed by google ( C version) in the background.
 
-The communication between the server and the client takes place via the posix message queues.
+* The communication between the server and the client takes place via the posix message queues.
 
-Main thing in the code is data sharing via shared memory management to speed up the data transfer between server and client and also the implementattion of the Qos mechanism when you have many clients. 
+* Main thing in the code is data sharing via shared memory management to speed up the data transfer between server and client and also the implementattion of the Qos mechanism when you have many clients. 
 
-The code has a server and a library ( which supports two methods of calling server sync and async and sync is done via msg_receive in posix message queues and async is done via the signal handler ( this is more productive as the client is not blocked and can do its work in the meantime).
+* The code has a server and a library ( which supports two methods of calling server sync and async and sync is done via msg_receive in posix message queues and async is done via the signal handler ( this is more productive as the client is not blocked and can do its work in the meantime).
 
-
+## Building code
 to build the code run all_build.sh ( this should be in the same folder as that of snappy c and other files, i have already place all that in one)
 
 
